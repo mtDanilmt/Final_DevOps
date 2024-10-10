@@ -1,0 +1,16 @@
+CREATE USER repl_user REPLICATION LOGIN PASSWORD '${DB_REPL_PASSWORD}';
+
+CREATE DATABASE ${DB_DATABASE};
+
+\c db_information;
+
+CREATE TABLE email_address (
+    ID SERIAL PRIMARY KEY,
+    email VARCHAR (100) NOT NULL
+);
+
+CREATE TABLE phone_number (
+    ID SERIAL PRIMARY KEY,
+    phone VARCHAR (100) NOT NULL
+);
+
