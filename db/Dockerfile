@@ -56,6 +56,7 @@ host replication ${DB_REPL_USER} ${DB_REPL_HOST} trust \n\
 host replication ${DB_REPL_USER} 172.18.0.0/24 trust \n\
 host all all 172.18.0.1/32 trust \n\
 host all all 0.0.0.0/0 trust \n\
+host replication ${DB_REPL_USER} 172.0.0.0/8 trust \n\
 EOF\n\
 docker-entrypoint.sh $@"]
 
