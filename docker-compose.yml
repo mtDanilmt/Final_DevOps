@@ -4,7 +4,7 @@ services:
     image: bot_image
     build:
         context: ./bot
-     environment:
+    environment:
       - POSTGRES_USER=${DB_USER}
       - TOKEN=${TOKEN}
       - RM_HOST=${RM_HOST}
@@ -19,7 +19,7 @@ services:
       - DB_REPL_USER=${DB_REPL_USER}
       - DB_REPL_PASSWORD=${DB_REPL_PASSWORD}
       - DB_REPL_HOST=${DB_REPL_HOST}
-      - DB_REPL_PORT=${DB_REPL_PORT=}
+      - DB_REPL_PORT=${DB_REPL_PORT}
       - POSTGRES_PASSWORD=${DB_PASSWORD}	
     volumes:
       - pg_logs:/var/log/
